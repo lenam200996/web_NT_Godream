@@ -70,7 +70,7 @@
 				</div>
 				<div class="row row-bottom-context">
 					<!--column 1-->
-					<div class="col-md-6 col-lg-3 col-sm-12 ">
+					<div class="col-md-6 col-lg-4 col-sm-12 ">
 						<div class="bottom-title">
 							Giới thiệu
 						</div>
@@ -79,7 +79,7 @@
 						</div>
 					</div>
 					<!--column 2-->
-					<div class="col-md-6 col-lg-2 col-sm-12">
+					<div class="col-md-6 col-lg-4 col-sm-12">
 						<div class="bottom-title">
 							Dịch vụ
 						</div>
@@ -97,7 +97,7 @@
 						</div>
 					</div>
 					<!--column 3-->
-					<div class="col-md-6 col-lg-2 col-sm-12">
+					<div class="col-md-6 col-lg-4 col-sm-12">
 						<div class="bottom-title">
 							Chính sách
 						</div>
@@ -113,7 +113,7 @@
 						</div>
 					</div>
 					<!--column 4-->
-					<div class="col-md-6 col-lg-2 col-sm-12">
+					<div class="col-md-6 col-lg-4 col-sm-12">
 						<div class="bottom-title">
 							Hỗ trợ
 						</div>
@@ -128,7 +128,7 @@
 						</div>
 					</div>
 					<!--column 5-->
-					<div class="col-md-6 col-lg-3 col-sm-12">
+					<div class="col-md-6 col-lg-4 col-sm-12">
 						<div class="bottom-title">
 							Facebook
 						</div>

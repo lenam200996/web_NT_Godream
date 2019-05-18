@@ -1,6 +1,6 @@
 		<footer class="container-fuild" id="footer">
 			<div class="copyright">
-				&copy; <?php echo date('Y');?> - Bản quyền của <?php bloginfo('name');?>. Thiết kế và phát triển bởi Godream
+				<span>&copy; <?php echo date('Y');?> - Bản quyền của <?php bloginfo('name');?>. Thiết kế và phát triển bởi Godream</span>
 			</div>
 		</footer>
 		</div> <!--end container-->

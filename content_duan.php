@@ -1,5 +1,4 @@
-
-	<div class="col-md-6 col-lg-4 col-sm-12 item-project wow zoomInDown">
+	<div class="col-md-6 col-lg-4 col-sm-12 item-project wow fadeIn">
 	<article id="post-<?php the_ID();?>" <?php post_class(); ?>>
 		<div class="div-item-project entry-thumbnail">
 			<div class="btn-items-project">
