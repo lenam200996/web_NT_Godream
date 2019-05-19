@@ -56,23 +56,29 @@
 					<div class="row">
 						<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-contact-inf">
 							<h2>LIÊN HỆ</h2>
+							<?php 
+								$id_this = get_the_ID();
+								$address = get_field('address',$id_this);
+								$phone = get_field('phone',$id_this);
+								$gmail = get_field('gmail',$id_this);
+							 ?>
 							<ul>
 								<li>
 									<p>
 										<span class="fas fa-map-marker-alt"></span>
-										<span class="span-info">Số 54 - Đường Cù Chính Lan Tp.Vinh - Nghệ An</span>
+										<span class="span-info"><?php echo $address; ?></span>
 									</p>
 								</li>
 								<li>
 									<p>
 										<span class="fas fa-phone"></span>
-										<span class="span-info">037.220.3737</span>
+										<span class="span-info"><?php echo $phone; ?></span>
 									</p>
 								</li>
 								<li>
 									<p>
 										<span class="fas fa-envelope"></span>
-										<span class="span-info">congnghenamthang@gmail.com</span>
+										<span class="span-info"><?php echo $gmail; ?></span>
 									</p>
 								</li>
 							</ul>
