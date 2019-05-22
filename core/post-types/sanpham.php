@@ -19,7 +19,7 @@ register_post_type( 'sanpham',
         'public' => true,
         'has_archive' => true,
         'menu_icon' => 'dashicons-admin-settings',
-        'rewrite' => array('slug' => 'sanpham'),
+        'rewrite' => array('slug' => 'san-pham'),
         )
     );
 }

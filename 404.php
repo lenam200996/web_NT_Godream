@@ -56,7 +56,7 @@
 			</div>
 		</div>
 	</main>
-</div>
+
 <!--bottom-->
 <?php 
 	$logobottom = get_field('logo_bottom',1386);
@@ -145,5 +145,6 @@
 <!--end bottom-->
 <div class="scroll-to-top">
 	<i class="fas fa-caret-up"></i>
+</div>
 </div>
 <?php get_footer(); ?>

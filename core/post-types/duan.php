@@ -19,7 +19,7 @@ register_post_type( 'duan',
         'public' => true,
         'has_archive' => true,
         'menu_icon' => 'dashicons-admin-settings',
-        'rewrite' => array('slug' => 'duan'),
+        'rewrite' => array('slug' => 'du-an'),
         )
     );
 }

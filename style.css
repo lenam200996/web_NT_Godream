@@ -16,6 +16,10 @@ body{
 	margin: 0;
 }
 
+input[type="text"]{
+	outline: none;
+}
+
 a{
 	color: black;
 }
@@ -23,7 +27,17 @@ ul{
 	list-style-type: none;
 }
 #footer{
-	position: relative;
+	position: absolute;
+	bottom: 0;
+    width: 100%;
+    margin: -190px auto;
+    height: 55px;
+}
+
+body>#container-fluid{
+	position: absolute;
+	width: 100%;
+	top: 0;
 }
 
 /*#main-content{
@@ -48,7 +62,7 @@ button{
 .content{
 	position: relative;
 	top: 135px;
-	margin-bottom: 135px;
+	margin-bottom: -55px;
 	transition: 1s all;
 }
 
@@ -168,7 +182,7 @@ button{
 	text-transform: uppercase;
 	color: #1F1F21;
 	position: relative;
-	
+	border:transparent 2px;
 }
 
 
@@ -179,7 +193,7 @@ button{
 }
 
 .collapse>ul>li:hover{
-	border-bottom: 1px solid #2864FF;
+	border-bottom: 2px solid #2864FF;
 	color: #1E4ECA !important;
 	
 }
@@ -221,7 +235,7 @@ button{
 }
 
 .current-menu-item{
-	border-bottom: 2px solid #2864FF;
+	border-bottom: 2px solid #2864FF !important;
 }
 
 .current-menu-item>a{
@@ -442,6 +456,12 @@ button{
 		border: 1px solid #D2D2D2;
 }
 
+@media only screen and (min-width: 375px){
+	.col-item-news>article>div>a>img{
+		min-width: 360px;
+		min-height: 260px
+	}
+}
 
 @media only screen and (max-width: 1200px){
 	#responsive-menu-button{
@@ -602,8 +622,8 @@ button{
 		object-fit: contain;
 	}
 
-	.col-item-news > article > .entry-thumbnail > img{
-		object-fit: contain;
+	.col-item-news > article > .entry-thumbnail >a> img{
+		width: 100%;
 	}
 	.col-item-news>article{
 		border: 1px solid #D2D2D2;
@@ -654,6 +674,9 @@ button{
 
 @media only screen and (max-width: 1024px){
 
+	#footer{
+		margin: auto !important;
+	}
 	#responsive-menu-button{
 		top: 15px !important;
 	}
@@ -666,7 +689,7 @@ button{
 	}
 
 	.small-centered{
-		padding-top: 0 !important;
+		padding-top: 85px !important;
 	}
 	.col-item-news>article{
 		border: 1px solid #D2D2D2;
@@ -871,7 +894,7 @@ button{
 		right: -18% !important;
 	}
 	.site-brand{
-		left: -14%;
+		/*left: -14%;*/
 	}
 	.container-head{
 		max-height: 500px;
@@ -944,7 +967,7 @@ button{
 
 	}
 	.small-centered{
-		margin: 2% auto !important;
+		padding-top: 35px !important;
 	}
 
 	.row-user-feedback-slide {
@@ -968,7 +991,7 @@ button{
 		font-size: 12px !important;
 	}
 	.icon-feelback{
-		padding-top: 40px !important; 
+		padding-top: 70px !important; 
 	}
 
 	.title-contain-head{
@@ -1059,7 +1082,9 @@ button{
 	.btn-no-background{
 		max-width: 130px;
 	}
-
+	.title-single{
+		font-size: 30px !important;
+	}
 	.draggable{
 		max-width: 400px !important;
 	}
@@ -1130,7 +1155,9 @@ button{
 		max-width: 100px !important;
 		
 	}
-
+	.title-single{
+		font-size: 28px !important;
+	}
 	.btn-background{
 		max-width: 100px !important;
 		
@@ -1565,6 +1592,7 @@ button{
 	border: 1px solid #D2D2D2;
 	border-bottom: none;
 	transition: 1s all;
+	object-fit: contain;
 }
 
 .div-product-item>article>.entry-thumbnail>a>img:hover{
@@ -1761,7 +1789,7 @@ button{
 
 
 .media-bottom{
-	width: 100%;
+	max-width: 320px;
 	height: 165px;
 	background: #EEEEEE;
 }
@@ -1876,7 +1904,7 @@ button{
 	.row-logo-bottom{
 		left: 0 !important;
 		transform: none !important;
-		padding-left: 15px;
+		/*padding-left: 15px;*/
 	}
 
 	.row-bottom-context > div{
@@ -1933,11 +1961,11 @@ h3 {
 	padding-top: 75%;
 }
 .slider-nav{
-	width: 200px;
+	width: 220px;
 	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: 135px;
+	left: 52%;
+	transform: translateX(-51%);
+	bottom: 125px;
 	max-height: 100px;
 	padding-top: 30px;
 }
@@ -1991,8 +2019,8 @@ h3 {
 }
 
 .small-centered{
-	margin: 5% auto;
-	padding-top: 30px;
+	margin: auto;
+	padding-top: 150px;
 	transition: 2s all;
 	min-height: 400px;
 	position: relative;
@@ -2011,7 +2039,7 @@ h3 {
 
 .row-user-feedback-slide{
 	position: absolute;
-	bottom: 0;
+	bottom: 57px;
 	color:#ffffff;
 	width: 100%;
 	text-align: center;
@@ -2033,7 +2061,7 @@ h3 {
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, 0);
-	padding-top: 50px;
+	padding-top: 100px;
 	color: yellow !important;
 }
 
@@ -2134,7 +2162,7 @@ h3 {
 }
 
 .context-single{
-	text-align: left;
+	text-align: justify;
 	margin-bottom: 100px;
 	line-height: 32px;
 }
@@ -2243,4 +2271,56 @@ h3 {
 	color: red;
 	font-style: italic;
 	margin: 30px;
+}
+
+
+.related-post-title{
+	font-size: 22px;
+	background-color: blue;
+	padding: 15px 30px 15px 30px;
+	color: #fff;
+	text-align: left;
+}
+.relatedthumb{
+	float: left;
+}
+
+.relatedthumb>a>img{
+	width: 90px !important;
+	height: 90px !important;
+}
+
+.relatedcontent>p>a{
+	font-size: 20px;
+}
+
+.relatedcontent{
+	margin-left: 10px;
+	float: left;
+}
+.sidebar-col{
+	border: .5px solid #ccc;
+	padding-left: 0px;
+	padding-right: 0px;
+	max-height: 420px;
+	margin-bottom: 50px;
+}
+
+.sidebar-col>ul{
+	padding-left: 15px;
+	width: 100%;
+	margin-top :15px;
+}
+.sidebar-col>ul>li{
+	margin-bottom: 30px;
+}
+
+.meta-date-post{
+	font-size: 12px;
+	color:#757575;
+}
+
+.sidebar-col>h3{
+	margin: 0 auto;
+	width: 100%;
 }

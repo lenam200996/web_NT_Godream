@@ -19,7 +19,7 @@ register_post_type( 'dichvu',
         'public' => true,
         'has_archive' => true,
         'menu_icon' => 'dashicons-admin-settings',
-        'rewrite' => array('slug' => 'dichvu'),
+        'rewrite' => array('slug' => 'dich-vu'),
         )
     );
 }
@@ -32,7 +32,7 @@ function create_category_dichvu() {
         'dichvu',
         array(
             'label' => __( 'Chuyên mục dịch vụ' ),
-            'rewrite' => array( 'slug' => 'Dich-vu-category' ),
+            'rewrite' => array( 'slug' => 'dich-vu-category' ),
             'hierarchical' => true,
             'show_admin_column' => true
         )

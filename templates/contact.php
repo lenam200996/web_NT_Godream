@@ -95,7 +95,7 @@
 			</div>
 		</div>
 	</main>
-</div>
+
 <!--bottom-->
 <?php 
 	$logobottom = get_field('logo_bottom',1386);
@@ -126,7 +126,7 @@
 				<div class="bottom-text">
 						<?php $args = array(
 				                   'post_type' =>'dichvu',
-				                   'posts_per_page' =>-1,
+				                   'posts_per_page' =>3,
 				                );
 						$the_query = new WP_Query( $args );
 						if ( $the_query->have_posts() ) {
@@ -184,5 +184,6 @@
 <!--end bottom-->
 <div class="scroll-to-top">
 	<i class="fas fa-caret-up"></i>
+</div>
 </div>
 <?php get_footer(); ?>

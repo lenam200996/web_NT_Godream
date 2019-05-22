@@ -70,7 +70,7 @@
 		</div>
 		<div class="row row-bottom-context">
 			<!--column 1-->
-			<div class="col-md-6 col-lg-4 col-sm-12 ">
+			<div class="col-md-6 col-lg-4 col-sm-12 col-xl-3">
 				<div class="bottom-title">
 					Giới thiệu
 				</div>
@@ -79,14 +79,14 @@
 				</div>
 			</div>
 			<!--column 2-->
-			<div class="col-md-6 col-lg-4 col-sm-12">
+			<div class="col-md-6 col-lg-4 col-sm-12 col-xl-2">
 				<div class="bottom-title">
 					Dịch vụ
 				</div>
 				<div class="bottom-text">
 						<?php $args = array(
 				                   'post_type' =>'dichvu',
-				                   'posts_per_page' =>-1,
+				                   'posts_per_page' =>3,
 				                );
 						$the_query = new WP_Query( $args );
 						if ( $the_query->have_posts() ) {
@@ -97,7 +97,7 @@
 				</div>
 			</div>
 			<!--column 3-->
-			<div class="col-md-6 col-lg-4 col-sm-12">
+			<div class="col-md-6 col-lg-4 col-sm-12 col-xl-2">
 				<div class="bottom-title">
 					Chính sách
 				</div>
@@ -113,7 +113,7 @@
 				</div>
 			</div>
 			<!--column 4-->
-			<div class="col-md-6 col-lg-4 col-sm-12">
+			<div class="col-md-6 col-lg-4 col-sm-12 col-xl-2">
 				<div class="bottom-title">
 					Hỗ trợ
 				</div>
@@ -128,7 +128,7 @@
 				</div>
 			</div>
 			<!--column 5-->
-			<div class="col-md-6 col-lg-4 col-sm-12">
+			<div class="col-md-6 col-lg-4 col-sm-12 col-xl-3">
 				<div class="bottom-title">
 					Facebook
 				</div>

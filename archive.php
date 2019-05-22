@@ -36,7 +36,6 @@
 </div>
 <?php get_header();?>
 <!--end header-->
-<div id="container">
 	<div class="content" role="main">
 		<main id="main-content">
 			<div class="container-fluid">
@@ -47,14 +46,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="row row_list_catogory">
-				<?php if(have_posts()):while(have_posts()):the_post(); ?>
-				<?php get_template_part('content_archive',get_post_format());
-				endwhile;endif; ?>
+			<div class="container">
+				<div class="row row_list_catogory">
+					<?php if(have_posts()):while(have_posts()):the_post(); ?>
+					<?php get_template_part('content_archive',get_post_format());
+					endwhile;endif; ?>
+				</div>
 			</div>
 		</main>
-	</div><!-- #content -->
-</div><!-- #container -->
+	
+
 <!--bottom-->
 <?php 
 	$logobottom = get_field('logo_bottom',1386);
@@ -78,14 +79,14 @@
 				</div>
 			</div>
 			<!--column 2-->
-			<div class="col-md-6 col-lg-4 col-sm-6 col-xl-2">
+			<div class="col-md-6 col-lg-4 col-sm-12 col-xl-2">
 				<div class="bottom-title">
 					Dịch vụ
 				</div>
 				<div class="bottom-text">
 						<?php $args = array(
 				                   'post_type' =>'dichvu',
-				                   'posts_per_page' =>-1,
+				                   'posts_per_page' =>3,
 				                );
 						$the_query = new WP_Query( $args );
 						if ( $the_query->have_posts() ) {
@@ -96,7 +97,7 @@
 				</div>
 			</div>
 			<!--column 3-->
-			<div class="col-md-6 col-lg-4 col-sm-6 col-xl-2">
+			<div class="col-md-6 col-lg-4 col-sm-12 col-xl-2">
 				<div class="bottom-title">
 					Chính sách
 				</div>
@@ -112,7 +113,7 @@
 				</div>
 			</div>
 			<!--column 4-->
-			<div class="col-md-6 col-lg-4 col-sm-6 col-xl-2">
+			<div class="col-md-6 col-lg-4 col-sm-12 col-xl-2">
 				<div class="bottom-title">
 					Hỗ trợ
 				</div>
@@ -144,4 +145,5 @@
 <div class="scroll-to-top">
 	<i class="fas fa-caret-up"></i>
 </div>
-<?php get_footer(); ?>
+</div>
+<?php get_footer();?>

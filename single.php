@@ -47,12 +47,20 @@
 			</div>
 		</div>
 		<div class="container">
-			<?php if (have_posts()) :while (have_posts()) : the_post();?>
-			<?php get_template_part('content',get_post_format());?>
-			<?php endwhile;?>
-			<?php mytheme_phantrang();?> <!---ham phan trang-->
-			<?php else: get_template_part('content','none');?>
-			<?php endif;?>
+			<div class="row">
+				<div class="col-md-8 col-sm-12 col-lg-8 col-xs-8">
+					<?php if (have_posts()) :while (have_posts()) : the_post();?>
+					<?php get_template_part('content',get_post_format());?>
+					<?php endwhile;?>
+					<?php mytheme_phantrang();?> <!---ham phan trang-->
+					<?php else: get_template_part('content','none');?>
+					<?php endif;?>
+				</div>
+				<div class="col-md-4 col-sm-12 col-lg-4 col-xs-4 sidebar-col">
+					<?php get_sidebar(); ?>
+				</div>
+			</div>
+			
 		</div>
 	</main>
 
@@ -70,7 +78,7 @@
 				</div>
 				<div class="row row-bottom-context">
 					<!--column 1-->
-					<div class="col-md-6 col-lg-4 col-sm-12 ">
+					<div class="col-md-6 col-lg-3 col-sm-12 col-xs-3">
 						<div class="bottom-title">
 							Giới thiệu
 						</div>
@@ -79,14 +87,14 @@
 						</div>
 					</div>
 					<!--column 2-->
-					<div class="col-md-6 col-lg-4 col-sm-12">
+					<div class="col-md-6 col-lg-2 col-sm-12 col-xs-2">
 						<div class="bottom-title">
 							Dịch vụ
 						</div>
 						<div class="bottom-text">
 								<?php $args = array(
 						                   'post_type' =>'dichvu',
-						                   'posts_per_page' =>-1,
+						                   'posts_per_page' =>3,
 						                );
 								$the_query = new WP_Query( $args );
 								if ( $the_query->have_posts() ) {
@@ -97,7 +105,7 @@
 						</div>
 					</div>
 					<!--column 3-->
-					<div class="col-md-6 col-lg-4 col-sm-12">
+					<div class="col-md-6 col-lg-2 col-sm-12 col-xs-2">
 						<div class="bottom-title">
 							Chính sách
 						</div>
@@ -113,7 +121,7 @@
 						</div>
 					</div>
 					<!--column 4-->
-					<div class="col-md-6 col-lg-4 col-sm-12">
+					<div class="col-md-6 col-lg-2 col-sm-12 col-xs-2">
 						<div class="bottom-title">
 							Hỗ trợ
 						</div>
@@ -128,7 +136,7 @@
 						</div>
 					</div>
 					<!--column 5-->
-					<div class="col-md-6 col-lg-4 col-sm-12">
+					<div class="col-md-6 col-lg-3 col-sm-12 col-xs-3">
 						<div class="bottom-title">
 							Facebook
 						</div>
