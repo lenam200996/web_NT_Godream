@@ -20,7 +20,13 @@
 
 	    <li>
 	    	<div class="relatedthumb">
-	    		<a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?>
+	    		<a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>">
+	    		<?php	
+	    		if(has_post_thumbnail()){
+					the_post_thumbnail('thumbnail');
+				}else{?>
+					<img src="<?php echo get_template_directory_uri();?>/assets/images/thumbnail-default.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" width="90" height="90">
+				<?php }?>
 	    		</a>
 	    	</div>
 	    	<div class="relatedcontent">

@@ -35,10 +35,6 @@ $(document).ready(function() {
         }
         
       });
-
-
-console.log($( window ).width());
-
   new WOW().init();
   $('.scroll-to-top:first').click(function(){
      $('html, body').stop().animate({
