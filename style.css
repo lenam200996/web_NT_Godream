@@ -182,7 +182,7 @@ button{
 	text-transform: uppercase;
 	color: #1F1F21;
 	position: relative;
-	border:transparent 2px;
+	    border-bottom: 2px solid transparent;
 }
 
 

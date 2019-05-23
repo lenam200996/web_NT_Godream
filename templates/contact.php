@@ -24,14 +24,14 @@
 			<div class="col-lg-4 col-md-6 col-sm-12 right-top-header transf-right">
 				<div class="col-lg-12 col-md-12 col-sm-12">
 					<?php echo $icon; ?>
-						<span class="title-top-header  title-white"><?php echo $title; ?></span>
+						<span class="title-top-header  title-white"><a href="mailto:<?php echo $title; ?>"><?php echo $title; ?></a></span>
 				</div>
 			</div>
 			<?php }else{ ?>
 				<div class="col-lg-3 col-md-6 col-sm-12 right-top-header">
 					<div class="col-lg-12 col-md-12 col-sm-12">
 					<?php echo $icon; ?>
-						<span class="title-top-header"><?php echo $title; ?></span>
+						<span class="title-top-header"><a href="tel:<?php echo $title; ?>"><?php echo $title; ?></a></span>
 					</div>
 				</div>
 			<?php } ?>
