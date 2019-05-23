@@ -456,6 +456,11 @@ button{
 		border: 1px solid #D2D2D2;
 }
 
+#responsive-menu-container{
+		margin-top: 135px !important;
+}
+
+
 @media only screen and (min-width: 375px){
 	.col-item-news>article>div>a>img{
 		min-width: 360px;
@@ -673,6 +678,10 @@ button{
 
 
 @media only screen and (max-width: 1024px){
+
+	#responsive-menu-container{
+		margin-top: 90px !important;
+	}
 
 	#footer{
 		margin: auto !important;
@@ -931,7 +940,7 @@ button{
 	}
 
 	 .col-item-news{
-	 	max-width: 400px;
+	 	max-width: 500px;
 	 	margin: auto;
 	 	margin-bottom: 15px;
 	 }
@@ -1349,7 +1358,7 @@ button{
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	z-index: 9999;
+	z-index: 999;
 	display: block;
 	opacity: 0;
 	text-align: center;
@@ -2090,6 +2099,14 @@ h3 {
 	font-size: 14px;
 }
 
+
+.btntop{
+	background:none;
+}
+
+.btntop>i{
+	color:#2864FF ;
+}
 .search-form>button{
 	border: none;
 	background: none;
