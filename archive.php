@@ -1,40 +1,5 @@
 <!--header-->
-<?php $id =1386; ?>
-<?php $slogan = get_field('slogan',$id); ?>
-<div class="row top-header" id="home">
-	<div class="container">
-				<div class="row">
-			<div class="col-lg-5 col-md-6 col-sm-12 left-top-header">
-				<span class="slogan"><?php echo $slogan; ?></span>
-			</div>
-			<?php 
-				if(get_field('contact',$id)){
-					$i = 1;
-					while(have_rows('contact',$id)):the_row();
-						$icon = get_sub_field('icon');
-						$title = get_sub_field('title');
-						if($i == 1){
-			 ?>
-
-			<div class="col-lg-4 col-md-6 col-sm-12 right-top-header transf-right">
-				<div class="col-lg-12 col-md-12 col-sm-12">
-					<?php echo $icon; ?>
-						<span class="title-top-header  title-white"><a href="mailto:<?php echo $title; ?>"><?php echo $title; ?></a></span>
-				</div>
-			</div>
-			<?php }else{ ?>
-				<div class="col-lg-3 col-md-6 col-sm-12 right-top-header">
-					<div class="col-lg-12 col-md-12 col-sm-12">
-					<?php echo $icon; ?>
-						<span class="title-top-header"><a href="tel:<?php echo $title; ?>"><?php echo $title; ?></a></span>
-					</div>
-				</div>
-			<?php } ?>
-			<?php $i++; endwhile; } ?>
-		</div>
-	</div>
-</div>
-<?php get_header();?>
+<?php get_header('sub'); ?>
 <!--end header-->
 	<div class="content" role="main">
 		<main id="main-content">
@@ -47,7 +12,7 @@
 				</div>
 			</div>
 			<div class="container">
-				<div class="row row_list_catogory">
+				<div class="row row_list_category">
 					<?php if(have_posts()):while(have_posts()):the_post(); ?>
 					<?php get_template_part('content_archive',get_post_format());
 					endwhile;endif; ?>
@@ -97,36 +62,14 @@
 				</div>
 			</div>
 			<!--column 3-->
-			<div class="col-md-6 col-lg-4 col-sm-12 col-xl-2">
+			<div class="col-md-6 col-lg-8 col-sm-6 col-xl-4">
 				<div class="bottom-title">
-					Chính sách
+					Map
 				</div>
 				<div class="bottom-text">
-					<?php if(get_field('chinh_sach',1386)){
-						while(have_rows('chinh_sach',1386)):the_row();
-							$titleChinhSach = get_sub_field('ten_chinh_sach');
-							$linkChinhSach = get_sub_field('link_chinh_sach');
-							?>
-							<p><a href="<?php echo $linkChinhSach; ?>"><?php echo $titleChinhSach; ?></a></p>
-					<?php endwhile;} ?>
-
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.12246982983!2d105.69140671409433!3d18.658499487328854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139cc2b7b9e3181%3A0xff439c7cb495053!2zQ8O0bmcgVHkgQ-G7lSBQaOG6p24gQ8O0bmcgTmdo4buHIE5hbSBUaMSDbmc!5e0!3m2!1svi!2s!4v1557721701571!5m2!1svi!2s" width="100%" height="165" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 				</div>
-			</div>
-			<!--column 4-->
-			<div class="col-md-6 col-lg-4 col-sm-12 col-xl-2">
-				<div class="bottom-title">
-					Hỗ trợ
-				</div>
-				<div class="bottom-text">
-					<?php if(get_field('ho_tro',1386)){
-						while(have_rows('ho_tro',1386)):the_row();
-							$titleHoTro = get_sub_field('title_support');
-							$linkHoTro = get_sub_field('link_support');
-							?>
-							<p><a href="<?php echo $linkHoTro; ?>"><?php echo $titleHoTro  ?></a></p>
-					<?php endwhile;} ?>
-				</div>
-			</div>
+			</div> 
 			<!--column 5-->
 			<div class="col-md-6 col-lg-4 col-sm-12 col-xl-3">
 				<div class="bottom-title">

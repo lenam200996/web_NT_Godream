@@ -88,5 +88,24 @@ $('.slider-nav').slick({
 });
 
 
+$('#subqua').click(function(){
+  var quantity = parseInt($('#input-quantity').val());
+  if(quantity > 1){
+    $('#input-quantity').val(quantity-1);
+  }
+
+})
+
+$('#plusqua').click(function(){
+   var quantity = parseInt($('#input-quantity').val());
+  $('#input-quantity').val(quantity+1);
+})
+
+
+$('.img-btn-carousel-product').click(function() {
+  var src = $(this).attr('src')
+  $('#img-show-product').attr('src',src)
+  console.log($('#img-show-product').attr('src'))
+})
 
 

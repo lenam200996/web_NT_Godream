@@ -9,10 +9,14 @@
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			</span><br>
 			<span class="details-product-item-price">
-				Giá thành: <span class="price">Liên hệ</span>
+				<?php global $product; ?>
+				Giá thành: <span class="price">
+					<?php echo wc_price( wc_get_price_including_tax( $product ) ); ?>
+				</span>
 			</span>
 		</div>
 	</article>
+	
 </div>
 
 

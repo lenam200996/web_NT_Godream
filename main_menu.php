@@ -16,6 +16,7 @@
 					<!-- Navbar links -->
 					<nav class="navbar navbar-expand-md bg-dark navbar-dark">
 						<?php mytheme_menu('primary-menu');?>
+						
 							<!--search form-->
 							<div class="search-form">
 							   	<button class="btnTogSearchForm"><i class="fas fa-search"></i></button>
@@ -26,7 +27,9 @@
 								</form>
 							</div>
 							<!--end search form--->
+
 					</nav>
+					
 				</div>
 			</div>
 		</div>

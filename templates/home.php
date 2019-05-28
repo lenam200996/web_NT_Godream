@@ -162,7 +162,7 @@
 						    </li>
 						    <?php
 						    $arrayCategoryID = array();
-			                $category = get_terms('sanpham_category');//custom category name 
+			                $category = get_terms('product_cat');//custom category name 
 							foreach ($category as $catVal) {?>
 							    <li class="nav-item">
 							   		<a class="nav-link" data-toggle="tab" href="#menu<?php echo $catVal->term_id;?>">
@@ -179,7 +179,7 @@
 					    <div id="hometab" class="container tab-pane active"><br>
 					    	<?php 
 				    			$args = array(
-				                   'post_type' =>'sanpham',
+				                   'post_type' =>'product',
 				                   'posts_per_page' =>8,
 				                );
 					    	?>
@@ -202,11 +202,11 @@
 				    	 	<div class="row">
 				    	 		<?php 
 									$args = array(
-									'post_type'		=>'sanpham',
+									'post_type'		=>'product',
 				                   	'posts_per_page' =>8,
 				                   'tax_query'  	=> array(
 								    	array(
-								        'taxonomy'		=> 'sanpham_category',
+								        'taxonomy'		=> 'product_cat',
 								        'field' 		=> 'term_id',
 									    'terms'         => $value,
 									    'operator'      => 'IN' 
@@ -362,7 +362,7 @@
 						<div class="bottom-text">
 								<?php $args = array(
 						                   'post_type' =>'dichvu',
-						                   'posts_per_page' =>-1,
+						                   'posts_per_page' =>3,
 						                );
 								$the_query = new WP_Query( $args );
 								if ( $the_query->have_posts() ) {
@@ -373,36 +373,45 @@
 						</div>
 					</div>
 					<!--column 3-->
-					<div class="col-md-6 col-lg-4 col-sm-6 col-xl-2">
+
+					<div class="col-md-6 col-lg-8 col-sm-6 col-xl-4">
+						<div class="bottom-title">
+							Map
+						</div>
+						<div class="bottom-text">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.12246982983!2d105.69140671409433!3d18.658499487328854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139cc2b7b9e3181%3A0xff439c7cb495053!2zQ8O0bmcgVHkgQ-G7lSBQaOG6p24gQ8O0bmcgTmdo4buHIE5hbSBUaMSDbmc!5e0!3m2!1svi!2s!4v1557721701571!5m2!1svi!2s" width="100%" height="165" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+						</div>
+					</div> 
+					<!-- <div class="col-md-6 col-lg-4 col-sm-6 col-xl-2">
 						<div class="bottom-title">
 							Chính sách
 						</div>
 						<div class="bottom-text">
-							<?php if(get_field('chinh_sach',$id_page)){
-								while(have_rows('chinh_sach',$id_page)):the_row();
-									$titleChinhSach = get_sub_field('ten_chinh_sach');
-									$linkChinhSach = get_sub_field('link_chinh_sach');
+							<?php //if(get_field('chinh_sach',$id_page)){
+								//while(have_rows('chinh_sach',$id_page)):the_row();
+									//$titleChinhSach = get_sub_field('ten_chinh_sach');
+									//$linkChinhSach = get_sub_field('link_chinh_sach');
 									?>
-									<p><a href="<?php echo $linkChinhSach; ?>"><?php echo $titleChinhSach; ?></a></p>
-							<?php endwhile;} ?>
+									<p><a href="<?php //echo $linkChinhSach; ?>"><?php //echo $titleChinhSach; ?></a></p>
+							<?php //endwhile;} ?>
 
 						</div>
-					</div>
+					</div> -->
 					<!--column 4-->
-					<div class="col-md-6 col-lg-4 col-sm-6 col-xl-2">
+					<!-- <div class="col-md-6 col-lg-4 col-sm-6 col-xl-2">
 						<div class="bottom-title">
 							Hỗ trợ
 						</div>
-						<div class="bottom-text">
-							<?php if(get_field('ho_tro',$id_page)){
-								while(have_rows('ho_tro',$id_page)):the_row();
-									$titleHoTro = get_sub_field('title_support');
-									$linkHoTro = get_sub_field('link_support');
-									?>
-									<p><a href="<?php echo $linkHoTro; ?>"><?php echo $titleHoTro  ?></a></p>
-							<?php endwhile;} ?>
-						</div>
-					</div>
+						<div class="bottom-text"> -->
+							 <?php //if(get_field('ho_tro',$id_page)){
+							// 	while(have_rows('ho_tro',$id_page)):the_row();
+							// 		$titleHoTro = get_sub_field('title_support');
+							// 		$linkHoTro = get_sub_field('link_support');
+							// 		?>
+							 		<!-- <p><a href="<?php //echo $linkHoTro; ?>"><?php //echo $titleHoTro  ?></a></p> -->
+							 <?php //endwhile;} ?>
+						<!-- </div>
+					</div> -->
 					<!--column 5-->
 					<div class="col-md-6 col-lg-4 col-sm-12 col-xl-3">
 						<div class="bottom-title">

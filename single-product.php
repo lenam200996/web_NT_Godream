@@ -1,34 +1,80 @@
-<!--header-->
 <?php get_header('sub'); ?>
-<!--end header-->
+
+
+	<?php
+/**
+ * The Template for displaying all single products
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/single-product.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see 	    https://docs.woocommerce.com/document/template-structure/
+ * @package 	WooCommerce/Templates
+ * @version     1.6.4
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+?>
+
 <div class="content">
 	<main id="main-content">
-		<div class="container-fluid">
-			<div class="row row-title-single">
-				<img src="<?php echo get_template_directory_uri();?>/assets/images/smart_house.jpg" alt="" width="100%" height="100%">
-				<div class="title-single">
-					<?php the_title(); ?>
-				</div>
-			</div>
-		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-sm-12 col-lg-8 col-xs-8">
-					<?php if (have_posts()) :while (have_posts()) : the_post();?>
-					<?php get_template_part('content',get_post_format());?>
-					<?php endwhile;?>
-					<?php else: get_template_part('content','none');?>
-					<?php endif;?>
+				<div class="col-md-12 col-sm-12 col-lg-9 col-xs-9">
+					<?php while ( have_posts() ) : the_post(); ?>
+
+						<?php wc_get_template_part( 'content', 'single-product' ); ?>
+
+					<?php endwhile; // end of the loop. ?>
 				</div>
-				<div class="col-md-4 col-sm-12 col-lg-4 col-xs-4 sidebar-col">
-					<?php get_sidebar(); ?>
+				<div class="col-md-12 col-sm-12 col-lg-3 col-xs-2 col-sidebar-single-product">
+					<?php get_sidebar('product'); ?>
 				</div>
 			</div>
-			
+			<div class="row row-related-product">
+				<h1>SẢN PHẨM CÙNG LOẠI</h1>
+				<div class="row list-slider-related-product">
+					<?php
+					global $product;
+					$query_related_product = new WP_Query(array(
+					'post_type'=>'product',
+					'post_status'=>'publish',
+					'tax_query' => array(
+					      array(
+					          'taxonomy' => 'product_cat',
+					          'field' => 'id',
+					          'terms' => $product->get_category_ids()
+					      )
+					  ),
+					'orderby' => 'ID',
+					'order' => 'DESC',
+					'posts_per_page'=> '4'));
+					?>
+					<?php while ($query_related_product->have_posts()) : $query_related_product->the_post(); ?>
+						<div class="item-related-product col-xs-2 col-lg-2 col-md-3 col-sm-6">
+							<div class="img-item-related-product">
+								<?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($loop->post->ID),'single-post-thumbnail'); ?>
+								<a href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>"></a>
+							</div>
+							<div class="name-related-item-product">
+								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							</div>
+							<p><?php echo wc_price( wc_get_price_including_tax( $product ) ); ?></p>
+						</div>
+					<?php endwhile ; wp_reset_query() ;?>
+					
+				</div>
+			</div>
 		</div>
 	</main>
-
-	<!--bottom-->
+<!--bottom-->
 		<?php 
 			$logobottom = get_field('logo_bottom',1386);
 			$aboutcontext = get_field('gioi_thieu_ngan',1386);
@@ -94,3 +140,5 @@
 		<!--end bottom-->
 </div>
 <?php get_footer();?>
+
+
