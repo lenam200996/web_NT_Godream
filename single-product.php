@@ -27,6 +27,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<main id="main-content">
 		<div class="container">
 			<div class="row">
+				<div class="col-md-12 col-sm-12 col-lg-3 col-xs-2 col-sidebar-single-product">
+					<?php get_sidebar('product'); ?>
+				</div>
 				<div class="col-md-12 col-sm-12 col-lg-9 col-xs-9">
 					<?php while ( have_posts() ) : the_post(); ?>
 
@@ -34,9 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<?php endwhile; // end of the loop. ?>
 				</div>
-				<div class="col-md-12 col-sm-12 col-lg-3 col-xs-2 col-sidebar-single-product">
-					<?php get_sidebar('product'); ?>
-				</div>
+				
 			</div>
 			<div class="row row-related-product">
 				<h1>SẢN PHẨM CÙNG LOẠI</h1>

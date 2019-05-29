@@ -204,10 +204,15 @@ add_filter( 'get_the_archive_title', function ($title) {
             $title = '<span class="vcard">' . get_the_author() . '</span>' ;
 
         }else{
-        	$title = post_type_archive_title( '', false );
+			$title = post_type_archive_title( '', false );
         }
 
     return $title;
 
 });
+add_theme_support( 'woocommerce' );
 
+function override_page_title() {
+return false;
+}
+add_filter('woocommerce_show_page_title', 'override_page_title');

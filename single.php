@@ -15,7 +15,7 @@
 					<?php if (have_posts()) :while (have_posts()) : the_post();?>
 					<?php get_template_part('content',get_post_format());?>
 					<?php endwhile;?>
-					<?php mytheme_phantrang();?> <!---ham phan trang-->
+					<?php mytheme_phantrang();?> <!---âaham phan trang-->
 					<?php else: get_template_part('content','none');?>
 					<?php endif;?>
 			
