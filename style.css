@@ -469,6 +469,7 @@ button{
 		min-width: 360px;
 		min-height: 260px
 	}
+
 }
 
 @media only screen and (max-width: 1200px){
@@ -942,6 +943,9 @@ button{
 
 
 @media only screen and (max-width: 576px){
+	.img-btn-carousel-product{
+		width: 85px !important;
+	}
 
 	.row-bottom-context{
 		padding-left: 15px;
@@ -1064,6 +1068,9 @@ button{
 
 
 @media only screen and (max-width: 475px){
+	.img-btn-carousel-product{
+		width: 85px !important;
+	}
 
 	#btn-add-to-cart{
 		width: 65%;
@@ -1126,6 +1133,18 @@ button{
 
 
 @media only screen and (max-width: 375px){
+
+	#btn-add-to-cart {
+    top: 60px !important;
+    width: 90% !important;
+    left: 0 !important;
+}
+.row-tab-details-product {
+    margin: 120px auto !important;
+}
+	.img-btn-carousel-product{
+		width: 85px !important;
+	}
 	.products>li{
 		width: 100% !important;
 
@@ -1155,6 +1174,9 @@ button{
 
 
 @media only screen and (max-width: 320px){
+	.img-btn-carousel-product{
+		width: 85px !important;
+	}
 	.products>li{
 		width: 100% !important;
 
@@ -1203,20 +1225,23 @@ button{
 
 	.nav-item {
 
-    	max-width: 55px !important;
+    	max-width: 130px !important;
 
 	}
 
 	.category-list-tab > .list-btn-category > ul > li > a {
 
-	    font-size: 7px !important;
-	    max-width: 55px !important;
+	    
+	    max-width: 130px !important;
 
 	}
 }
 
 
 @media only screen and (max-width: 768px){
+	.img-btn-carousel-product{
+		width: 85px !important;
+	}
 
 	.woocommerce img, .woocommerce-page img{
 		max-width: none !important;
@@ -2707,3 +2732,4 @@ transform: translateY(-50%);
 	height: 220px !important;
 	object-fit: contain;
 }
+

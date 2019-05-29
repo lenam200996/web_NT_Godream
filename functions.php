@@ -210,3 +210,4 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 
 });
+
