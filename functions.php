@@ -216,3 +216,28 @@ function override_page_title() {
 return false;
 }
 add_filter('woocommerce_show_page_title', 'override_page_title');
+//---
+//add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+ 
+function custom_override_checkout_fields( $fields ) {
+unset($fields['billing']['billing_company']);
+ 
+return $fields;
+}
+
+//add_filter( 'woocommerce_checkout_fields' , 'remove_country_fields' );
+ 
+function remove_country_fields( $fields ) {
+unset($fields['billing']['billing_country']);
+ 
+return $fields;
+}
+
+//add_filter( 'woocommerce_checkout_fields' , 'remove_address_two_fields' );
+ 
+function remove_address_two_fields( $fields ) {
+unset($fields['billing']['billing_address_2']);
+unset($fields['billing']['billing_postcode']);
+ 
+return $fields;
+}

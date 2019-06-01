@@ -27,7 +27,13 @@ global $product;
 
 ?>
 <div class="row row-redir">
-	<span><a id="home-url" href="<?php echo get_home_url(); ?>">Trang chủ</a>  <?php echo $product->get_categories(); ?> <a id="product-url"><?php echo  $product->get_slug(); ?></a></span>
+	<span>
+    <a id="home-url" href="<?php echo get_home_url(); ?>">Trang chủ</a> 
+    <i class="fas fa-caret-right"></i> 
+    <?php echo trim($product->get_categories()); ?> 
+    <i class="fas fa-caret-right"></i> 
+    <a id="product-url"><?php echo  trim($product->get_slug()); ?></a>
+  </span>
 </div>
 <div class="row">
 	<div class="col-md-12 col-xs-5 col-lg-5 col-sm-12 img-view-product">

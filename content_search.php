@@ -14,7 +14,7 @@
 		</div>
 		<div class="details-product-item">
 			<span class="details-product-item-title">
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 			</span><br>
 			<span class="details-product-item-price">
 				<a href="<?php the_permalink(); ?>">Chi tiết</a>

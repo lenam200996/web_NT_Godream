@@ -3,6 +3,8 @@ $(document).ready(function() {
     $('.scroll-to-top:first').css('display','block');
 }
 
+
+
 $(window).scroll(function(event) {
     var pos_body = $('html,body').scrollTop();
     if(pos_body > 20){
