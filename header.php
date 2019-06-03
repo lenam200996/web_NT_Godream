@@ -10,6 +10,11 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/lib/slick_carousel/slick.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/lib/slick_carousel/slick-theme.css">
+	<script
+    type="text/javascript"
+    async defer
+    src="//assets.pinterest.com/js/pinit.js"
+	></script>
 	<?php wp_head(); ?>
 	
 </head>
