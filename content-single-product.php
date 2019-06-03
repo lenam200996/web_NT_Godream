@@ -35,7 +35,7 @@ global $product;
     <a id="product-url"><?php echo  trim($product->get_slug()); ?></a>
   </span>
 </div>
-<div class="row">
+<div class="row" id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 	<div class="col-md-12 col-xs-5 col-lg-5 col-sm-12 img-view-product">
 		<?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($loop->post->ID),'single-post-thumbnail'); ?>
 
